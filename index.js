@@ -10,7 +10,4 @@ app.get("/", (req, res) => {
   res.send("Welcome User");
 });
 
-// const PORT = "8000";
-app.listen(process.env.PORT || 5000, () =>
-  console.log(`listening om port ${PORT}`)
-);
+app.listen(process.env.PORT || 5000);
