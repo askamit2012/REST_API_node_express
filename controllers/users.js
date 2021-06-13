@@ -1,4 +1,20 @@
-let users = [];
+let users = [
+  {
+    name: "Amit Kumar",
+    usn: "1ds12cs008",
+    college: "DSCE",
+  },
+  {
+    name: "Shreyash Prashu",
+    usn: "1ds12ec068",
+    college: "DSCE",
+  },
+  {
+    name: "Nikhil Kumar",
+    usn: "1ds12cs008",
+    college: "DSCE",
+  },
+];
 const { v4: uuidv4 } = require("uuid");
 
 const createUser = (req, res) => {
