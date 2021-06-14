@@ -1,5 +1,7 @@
 const express = require("express");
-// const { uuidv4 } = require("uuid");
+const router = express.Router();
+const upload = require("../services/ImageUpload");
+
 const {
   createUser,
   getUsers,
@@ -8,15 +10,13 @@ const {
   updateUser,
 } = require("../controllers/users");
 
-const router = express.Router();
-
 // All routes in  here start with /users
 
 router.get("/", getUsers);
 
 router.get("/:id", getUserById);
 
-router.post("/", createUser);
+router.post("/", upload.single("avatar"), createUser);
 
 router.delete("/:id", deleteUser);
 
